@@ -1,0 +1,67 @@
+@import "compass"
+@import "compass/reset"
+@import "compass/css3"
+
+$heading-color: #A51E22
+$bg-color: #C8E5F1
+$text-color: #716558
+$code-bg-color: #E3EBEE
+$code-border-color: #ABC5CB
+
+=float_left
+  display: block
+  float: left
+  
+=no_float
+  float: none
+  clear: both
+  overflow: hidden
+
+html, body
+  font-family: "Helvetica Neue", Helvetica, Arial, sans
+
+body
+  padding: 20px
+  background: $bg-color //url('../images/bg.gif')
+
+h1, h2, h3, h4, h5 ,h6
+  font-weight: bold
+
+h1
+  font-size: 3em
+  line-height: 1em
+  color: $heading-color
+  
+h2
+  font-size: 1.5em
+  margin: 20px 0 5px 0
+
+#header
+  +no_float
+  img
+    +float_left
+    
+  h1
+    +float_left
+    padding: 80px 0 0 30px
+    span
+      display: block
+      font-size: .5em
+      color: $text-color
+      
+#content
+  margin-left: 400px
+  width: 600px
+
+  p
+    color: $text-color
+    padding: 10px 0
+    
+  pre
+    padding: 10px
+    background-color: $code-bg-color
+    border: 1px solid $code-border-color
+    +border-radius(2px)
+    color: $heading-color
+    font-family: Monaco, monospace
+    font-size: .9em
